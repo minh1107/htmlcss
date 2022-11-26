@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>id class</title>
+    <style>
+      #first-heading {
+        color: red;
+      }
+      .second-title {
+        color: blue;
+      }
+      td {
+        display: table-cell;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="first-heading">ID and class</h1>
+    <p>Id không được trùng</p>
+    <p class="second-title">Class có thể dùng lại nhiều lần</p>
+    <p class="second-title">Class có thể dùng lại nhiều lần</p>
+    <p class="second-title">Class có thể dùng lại nhiều lần</p>
+
+    <table style="border: 1px solid #ccc">
+      <thead style="border: 1px solid #ccc">
+        <tr>
+          <th>Selector</th>
+          <th>Ví dụ</th>
+          <th>Mô tả</th>
+        </tr>
+      </thead>
+      <tbody style="border: 1px solid #ccc">
+        <tr>
+          <td>.class</td>
+          <td>.intro</td>
+          <td>Chọn tất cả các thẻ có class=“intro”</td>
+        </tr>
+        <tr>
+          <td>.class1.class2</td>
+          <td>.name1.name2</td>
+          <td>
+            Chọn tất cả các thẻ có cả name1 và name2 được đặt trong thuộc tính
+            class của nó
+          </td>
+        </tr>
+        <tr>
+          <td>.class1 .class2</td>
+          <td>.name1 .name2</td>
+          <td>
+            Chọn tất cả các thẻ có class=“name2” là con của một phần tử có
+            class=“name1”
+          </td>
+        </tr>
+        <tr>
+          <td>*</td>
+          <td>*</td>
+          <td>Chọn tất cả các thẻ</td>
+        </tr>
+        <tr>
+          <td>element</td>
+          <td>h2</td>
+          <td>Chọn tất cả các thẻ h2</td>
+        </tr>
+        <tr>
+          <td>element.class</td>
+          <td>div.box</td>
+          <td>Chọn tất cả thẻ div có class=“box”</td>
+        </tr>
+        <tr>
+          <td>element, element</td>
+          <td>div, h2</td>
+          <td>Chọn tất cả thẻ div và h2</td>
+        </tr>
+        <tr>
+          <td>element element</td>
+          <td>div p</td>
+          <td>Chọn tất cả thẻ p trong thẻ div</td>
+        </tr>
+        <tr>
+          <td>element &gt; element</td>
+          <td>div &gt; p</td>
+          <td>Chọn tất cả thẻ p là con trực tiếp của thẻ div</td>
+        </tr>
+        <tr>
+          <td>element + element</td>
+          <td>div + p</td>
+          <td>Chọn thẻ p đứng liền kề sau thẻ div</td>
+        </tr>
+        <tr>
+          <td>element ~ element</td>
+          <td>div ~ p</td>
+          <td>Chọn tất cả thẻ p đứng sau thẻ div</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
