@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lớp giả</title>
+    <style>
+        li {
+            font-size: 20px;
+        }
+        ul li:first-child:hover {
+            color: red;
+        }
+
+        ul li:last-child:hover {
+            color: green;
+        }
+        ul li:nth-child(3):active {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS pseudo-classes</h1>
+
+    <ul>
+        <li>:root - Tham chiếu đến phần tử gốc bao toàn bộ</li>
+        <li>:hover - Di chuyển chuột vào tag có hover để  thực thi các  css</li>
+        <li>:active - Khi click chuột và giữ thì các css của tag đó sẽ hoạt đông</li>
+        <li>:first-child - Chọn tag đầu tiên của các tag cùng cấp</li>
+        <li>:last-child - Chọn cái cuối cùng của các tag cùng cấp</li>
+    </ul>
+</body>
+</html>

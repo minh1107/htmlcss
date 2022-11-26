@@ -5,8 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mức độ ưu tiên</title>
+    <link rel="stylesheet" href="./main.css">
+    <style>
+        .heading {
+            color: red;
+        }
+        h1 {
+            color: yellow;
+        }
+        #heading-id {
+            color: green;
+        }
+        /* point 1100 */
+        #heading-id.heading {
+            color: yellowgreen;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1 class="heading" id="heading-id" style="color: pink">Priority</h1>
+    <ol>
+        <li>Internal, External</li>
+        <li>Inline - 1000</li>
+        <li>#id - 100</li>
+        <li>.class - 10</li>
+        <li>tag - 1</li>
+        <li>Equal specificity - Gọi 2 lần sẽ ưu tien ông mới hơn</li>
+        <li>Universal selector and inherited? - Thừa hưởng từ thẻ lớn nhất</li>
+    </ol>
+
+    <p>Các cách nhiề điểm hơn sẽ ưu tiên cao hơn</p>
 </body>
 </html>
