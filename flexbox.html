@@ -1,12 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Flexbox</title>
-</head>
-<body>
-    
-</body>
+    \
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      body {
+        background-color: #ccc;
+      }
+
+      /* Navbar */
+      .nav {
+        min-height: 42px;
+        background-color: #ef5122;
+      }
+
+      .nav-list {
+        padding-left: 0;
+        margin: auto 16px;
+      }
+
+      .nav-item {
+        color: #fff;
+        list-style: none;
+        margin: 0 8px;
+        display: inline-block;
+      }
+
+      /* Form layout */
+      .form-container {
+        max-width: 720px;
+        padding: 32px;
+        margin: 36px auto 0 auto;
+        background-color: #fff;
+      }
+
+      .form__row {
+        padding: 8px 0;
+      }
+
+      .form__label {
+      }
+
+      .form__input {
+      }
+
+      /* Column layout */
+      .column-layout {
+        margin-top: 36px;
+        padding: 12px 0;
+        background-color: #fff;
+      }
+
+      .column-item {
+        padding: 0 16px;
+      }
+
+      .sidebar-one {
+      }
+
+      .sidebar-two {
+      }
+
+      .main-column {
+      }
+
+      /* Feature layout */
+      .feature-layout {
+        margin-top: 36px;
+      }
+
+      /* PC, Tablet */
+      @media (min-width: 740px) {
+        .feature-layout {
+        }
+      }
+
+      .feature-item {
+        padding: 12px 16px;
+        margin-top: 16px;
+      }
+
+      .feature-item:nth-child(1) {
+        background-color: rgb(192, 227, 222);
+      }
+
+      .feature-item:nth-child(2) {
+        background-color: rgb(227, 200, 192);
+      }
+
+      .feature-item:nth-child(3) {
+        background-color: rgb(226, 192, 227);
+      }
+
+      /* Wrap layout */
+      .wrap-layout {
+        background-color: #fff;
+        margin-top: 36px;
+        padding: 12px 0 32px 0;
+      }
+
+      .wrap-layout__item {
+        width: 148px;
+        height: 90px;
+        color: #fff;
+        text-align: center;
+        line-height: 90px;
+        font-size: 48px;
+        font-weight: 700;
+        margin-top: 20px;
+        background-color: #ef5122;
+      }
+
+      /* Center layout */
+      .center-layout {
+        background-color: rgb(192, 227, 194);
+        margin: 36px auto 0 auto;
+        padding: 32px 0;
+        max-width: 640px;
+        height: 360px;
+      }
+
+      .center-layout__item {
+        font-size: 42px;
+        font-weight: 700;
+      }
+
+      /* Chart layout */
+      .chart-layout {
+        margin: 36px auto 0 auto;
+        padding: 32px 0;
+        height: 320px;
+        background-color: #fff;
+      }
+
+      .chart-layout__item {
+        width: 60px;
+        color: #fff;
+        text-align: center;
+        height: var(--percent);
+        background-color: #ef5122;
+      }
+
+      /* End */
+      .the-end {
+        margin: 12px auto 48px auto;
+        padding: 32px 0;
+        max-width: 740px;
+        min-height: 360px;
+      }
+
+      .the-end__first {
+        padding: 4px 16px;
+        background-color: #fff;
+      }
+
+      .the-end__second {
+      }
+
+      .the-end__second-one {
+        padding: 4px 16px;
+        background-color: rgb(227, 192, 214);
+      }
+
+      .the-end__second-two {
+        padding: 4px 16px;
+        background-color: rgb(192, 210, 227);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The flex model</h1>
+    <img
+      src="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox/flex_terms.png"
+      alt=""
+    />
+    <h1>Các thuộc tính trong flexbox</h1>
+    <ol>
+      <li>display: flex | inline-flex</li>
+      <li>flex-direction: row | column</li>
+      <li>flex-wrap: nowrap | wrap | wrap-reverse - Cho giá trị xuống dòng</li>
+      <li>flex-basis: length - xét kích thước cho main-size</li>
+      <li>
+        justify-content: flex-start | flex-end | ... - Căn các flex-item trong
+        trừờng hợp nằm ngang
+      </li>
+      <li>
+        justify-self: flex-start | flex-end | center - xét cho chính bản thân
+        như flex-content
+      </li>
+      <li>align-content: flex-start | flex-end | center -</li>
+      <li>flex-grow: number - Thay đổi kích thước của flex-item</li>
+      <li>flex-shrink: number - Thay đổi thu nhỏ lại</li>
+      <li>flex-shrink: number</li>
+      <li>flex: number - cú pharps viết ngắn</li>
+      <li>order: number - Thứ tự flex-item được hiển thị</li>
+      <li>flex-flow: - cú pháp viết tắt</li>
+    </ol>
+    <a
+      href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox"
+      >refer</a
+    >
+    <a href="https://codepen.io/enxaneta/full/adLPwv/">refer 2</a>
+
+    <h1>Bài thực hanh flex-box</h1>
+
+    <!-- Navbar -->
+    <div class="nav" style="display: flex; justify-content: space-between;">
+      <ul class="nav-list">
+        <li class="nav-item">Giới thiệu</li>
+        <li class="nav-item">Kết nối</li>
+        <li class="nav-item">Tải ứng dụng</li>
+      </ul>
+      <ul class="nav-list">
+        <li class="nav-item">Đăng ký</li>
+        <li class="nav-item">Đăng nhập</li>
+      </ul>
+    </div>
+
+    <!-- Form layout -->
+    <div class="form-container" >
+      <form action="" class="form">
+        <div class="form__row" style="display: flex;">
+          <label class="form__label" style="min-width: 90px;" for="name">Name:</label>
+          <input class="form__input" type="text" style="flex: 1" id="name" />
+        </div>
+        <div class="form__row" style="display: flex;">
+          <label class="form__label" for="password" style="min-width: 90px;">Password:</label>
+          <input class="form__input" type="password" id="password" style="flex: 1"/>
+        </div>
+      </form>
+    </div>
+
+    <!-- Column layout -->
+    <div class="column-layout" style="display: flex;">
+      <div class="column-item sidebar-one" style="flex: 1;">
+        <h2>Sidebar one</h2>
+        <p>
+          I'm writing to you in reference to the job position advertised MyCV.vn
+          which immediately appealed to me.Since I've been interested in your
+          company for a long time, I would like to apply today as a Sample
+          position in permanent employment.
+        </p>
+      </div>
+      <div  class="column-item main-column" style="flex: 3;">
+        <h2>Main column</h2>
+        <p>
+          I'm writing to you in reference to the job position advertised MyCV.vn
+          which immediately appealed to me.Since I've been interested in your
+          company for a long time, I would like to apply today as a Sample
+          position in permanent employment.
+        </p>
+        <p>
+          At the moment I'm working as a Sample position at Sample company.My
+          most important tasks include familiarizing myself with new products,
+          conducting sales talks and transferring orders.
+        </p>
+        <p>
+          Your job list sounds great! I hope that this will enable me to develop
+          personal and professional development opportunities.I like your focus
+          and image in this industry very well, so I see you as a very
+          interesting employer.I have been following your development for a long
+          time in the media and therefore believe that I also fit in well with
+          the company.
+        </p>
+      </div>
+      <div class="column-item sidebar-two" style="flex: 1;">
+        <h2>Sidebar two</h2>
+        <p>
+          I'm writing to you in reference to the job position advertised MyCV.vn
+          which immediately appealed to me.Since I've been interested in your
+          company for a long time, I would like to apply today as a Sample
+          position in permanent employment.
+        </p>
+      </div>
+    </div>
+
+    <!-- Feature layout -->
+    <div class="feature-layout" style="display: flex; justify-content: space-around;">
+      <div class="feature-item" style="flex-basis: 30%;">
+        <h2>Feature 1</h2>
+        <p>
+          I'm writing to you in reference to the job position advertised MyCV.vn
+          which immediately appealed to me.Since I've been interested in your
+          company for a long time, I would like to apply today as a Sample
+          position in permanent employment.
+        </p>
+      </div>
+      <div class="feature-item" style="flex-basis: 30%;">
+        <h2>Feature 2</h2>
+        <p>
+          At the moment I'm working as a Sample position at Sample company.My
+          most important tasks include familiarizing myself with new products,
+          conducting sales talks and transferring orders.
+        </p>
+      </div>
+      <div class="feature-item" style="flex-basis: 30%;">
+        <h2>Feature 3</h2>
+        <p>
+          Your job list sounds great! I hope that this will enable me to develop
+          personal and professional development opportunities.I like your focus
+          and image in this industry very well, so I see you as a very
+          interesting employer.I have been following your development for a long
+          time in the media and therefore believe that I also fit in well with
+          the company.
+        </p>
+      </div>
+    </div>
+
+    <!-- Wrap layout -->
+    <div class="wrap-layout" style="display: flex; justify-content: space-around; flex-wrap: wrap-reverse;">
+      <div class="wrap-layout__item">1</div>
+      <div class="wrap-layout__item">2</div>
+      <div class="wrap-layout__item">3</div>
+      <div class="wrap-layout__item">4</div>
+      <div class="wrap-layout__item">5</div>
+    </div>
+
+    <!-- Center layout -->
+    <div class="center-layout" style="display: flex;">
+      <h3 class="center-layout__item" style="margin: auto;">Center item</h3>
+    </div>
+
+    <!-- Chart -->
+    <div class="chart-layout" style="display: flex; align-items: flex-end; justify-content: space-around;">
+      <div class="chart-layout__item" style="--percent: 10%">10%</div>
+      <div class="chart-layout__item" style="--percent: 20%">20%</div>
+      <div class="chart-layout__item" style="--percent: 40%">40%</div>
+      <div class="chart-layout__item" style="--percent: 90%">90%</div>
+      <div class="chart-layout__item" style="--percent: 80%">80%</div>
+      <div class="chart-layout__item" style="--percent: 40%">40%</div>
+      <div class="chart-layout__item" style="--percent: 10%">10%</div>
+      <div class="chart-layout__item" style="--percent: 20%">20%</div>
+      <div class="chart-layout__item" style="--percent: 69%">69%</div>
+      <div class="chart-layout__item" style="--percent: 96%">96%</div>
+      <div class="chart-layout__item" style="--percent: 60%">60%</div>
+      <div class="chart-layout__item" style="--percent: 88%">88%</div>
+    </div>
+
+    <!-- End -->
+    <div class="the-end" style="display: flex;">
+      <div class="the-end__first" >
+        <p>
+          I'm writing to you in reference to the job position advertised MyCV.vn
+          which immediately appealed to me.Since I've been interested in your
+          company for a long time, I would like to apply today as a Sample
+          position in permanent employment.
+        </p>
+        <p>
+          At the moment I'm working as a Sample position at Sample company.My
+          most important tasks include familiarizing myself with new products,
+          conducting sales talks and transferring orders.
+        </p>
+        <p>
+          Your job list sounds great! I hope that this will enable me to develop
+          personal and professional development opportunities.I like your focus
+          and image in this industry very well, so I see you as a very
+          interesting employer.I have been following your development for a long
+          time in the media and therefore believe that I also fit in well with
+          the company.
+        </p>
+      </div>
+      <div class="the-end__second" style="display: flex; flex-direction: column-reverse; " >
+        <div class="the-end__second-one" style="order: 2;">
+          <p>
+            I'm writing to you in reference to the job position advertised
+            MyCV.vn which immediately appealed to me.Since I've been interested
+            in your company for a long time.
+          </p>
+        </div>
+        <div class="the-end__second-two" style="order: 2;">
+          <p>
+            At the moment I'm working as a Sample position at Sample company.My
+            most important tasks include familiarizing myself with new products,
+            conducting sales talks and transferring orders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

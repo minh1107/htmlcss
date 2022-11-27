@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM</title>
+    <style>
+        * {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+  </head>
+  <body>
+    <pre>
+        #BEM
+        - là tiêu chuẩn đặt tên class trong class
+
+        ##Ý nghĩa
+        -viết tắt của 'Block element modifier'
+        - block: khối
+        -element: phần tử
+        -modifier:bổ sung ý nghĩa cho 'block' hoặc 'element'
+
+
+        ##tại sao phải dùng BEM?
+        - mỗi người đặt tên class 1 kiểu
+        -members đặt tên class trùng nhau, ghi đè css nhau ( gay hỏng code của người cũ)
+
+
+        ##Cú pháp
+        - .block
+        - .block__element // element
+        - .block--modifier
+        - .block__element--modifier
+        vd:
+        .card // block
+        .card__heading // element
+        .card--error // block--modifier
+
+
+        ## Tính ứng dụng
+        - xây dựng layout web ( bố cục)
+        - xây dựng thành phần web
+
+        ## Ưu điểm
+        -Tái xử dụng dễ dàng
+        - tính rõ dàng
+        - Giúp cả team làm việc với nhau ổn hơn
+        -tính modul, không lo css class này ảnh hưởng đến class khác
+
+
+
+        ## nhược điểm
+        - tên class dài
+        - nhiều bố cho rằng là xấu
+
+
+        ## Khi nào dùng BEM phù hợp
+        - dự án nhiều members
+        - dự án lớn, số lượng page nhiều hoặc số thành phần trên giao diện nhiều
+
+
+        ## thực hành
+        - làm button
+        - làm message
+        - làm 1 thành phần trên web
+
+    </pre>
+  </body>
+</html>
