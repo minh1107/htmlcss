@@ -1,0 +1,330 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main {
+}
+
+/* header */
+
+#header {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    --height-header: 48px;
+    height: var(--height-header);
+    background-color: rgb(29, 28, 28);
+}
+
+#nav  {
+    display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li a {
+    line-height: var(--height-header);
+    color: white;
+    text-decoration: none;
+    padding: 0 24px;
+}
+
+#nav > li:hover > a{
+    display: inline-block;
+    background-color: rgb(137, 164, 155);
+    color: black;
+    transition: 0.4s ease-out;
+}
+
+#nav li a {
+    position: relative;
+}
+
+#nav li:hover .subnav li a {
+    color: black;
+}
+
+#nav li:hover .subnav {
+    display: block;
+    color: black;
+}
+
+.subnav{
+    display: none;
+    position: absolute;
+    min-height: 100px;
+    width: 200px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px rgb(93, 87, 87);
+}
+
+.subnav li{
+    display: block;
+}
+
+.subnav a {
+    color: black;
+}
+
+#nav .subnav li:hover a {
+    color: black;
+    background-color: #ccc;
+    display: block;
+}
+
+.search {
+    float: right;
+    line-height: var(--height-header);
+    padding: 0 20px;
+}
+
+.search:hover {
+    background-color: rgb(153, 55, 55);
+    display: block;
+    color: black;
+}
+
+.search:hover .search-icon {
+    color: black;
+}
+
+.search-icon {
+    color: white;
+}
+
+/* slider */
+
+#slider {
+    position: relative;
+    padding-top: 50%;
+    background-image: url(https://www.w3schools.com/w3css/img_ny.jpg);
+    background-size: cover;
+}
+
+.slide-item {
+    color: white;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.slide-item h1 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slide-item p {
+    font-size: larger;
+}
+/* content */
+#content {
+    margin: 20px 10%;
+}
+
+/* about */
+
+.about {
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.about h1 {
+    font-weight: 100;
+    font-size: 50px;
+}
+
+.about-favor {
+    font-style: italic;
+    text-align: center;
+}
+
+.about .about-describ {
+    text-align: justify;
+    line-height: 20px;
+}
+
+/* team section */
+
+.team {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-info {
+    width: 33%;
+    margin: auto;
+}
+
+.team-name {
+    text-align: center;
+}
+
+.team-img {
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+}
+
+/* tour */
+
+.tour {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.tour h1 {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.tour p:nth-child(2) {
+    font-style: italic;
+    margin-bottom: 12px;
+}
+
+.tour-month {
+    border: 1px solid #ccc;
+    color: white;
+    background-color: black;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+.tour-month p {
+    padding: 8px 6px;
+    border-bottom: 1px solid #ccc;
+}
+
+.tour-month span {
+    background-color: red;
+    padding: 4px 2px;
+    margin-left: 4px;
+}
+
+.tour-buy_ticket {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+
+
+.tour-buy_ticket img {
+    width: 100%;
+}
+
+.tour-img {
+    text-align: left;
+}
+
+.tour-package {
+    margin: 12px 0 12px 10px;
+}
+
+.tour-img h2 {
+    font-weight: 200;
+}
+
+.tour-img > p:nth-child(3) {
+    margin-top: 19px;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.tour-img button {
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: black;
+    color: white;
+}
+
+.tour-img button:hover {
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* contact */
+
+.contact {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact h1 {
+    font-size: 40px;
+    font-weight: 100;
+}
+
+.contact p:nth-child(2) {
+    margin-top: 10px;
+}
+
+.contact p:nth-child(5) {
+    font-style: italic;
+    margin-top: 20px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.contact form input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding-left: 12px;
+}
+
+.contact form button {
+    font-size: 14px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    background-color: black;
+    color: white;
+}
+
+.contact form button:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+/* local */
+
+.local {
+    margin-top: 40px;
+    background-image: url(https://www.w3schools.com/w3images/map.jpg);
+    padding-top: 50%;
+    background-size: cover;
+}
+
+/* footer */ 
+#footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+.footer-icon {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.footer-copyright {
+    margin-bottom: 15px;
+}
